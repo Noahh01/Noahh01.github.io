@@ -1,196 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset='utf-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title>Noah Hammoud</title>
-    <link rel="icon" href="images/browserIcon.png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Noah Hammoud — Software Engineer. Terminal-themed personal site.">
+    <title>Noah Hammoud — Software Engineer</title>
+    <link rel="icon" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark pt-3 pb-3 mb-5 font-weight-bold navbar-style fixed-top">
-      <a class="navbar-brand ml-lg-4 logo pb-2" href="#top"><span>Noah</span> Hammoud</a>
-      <button 
-        class="navbar-toggler" 
-        type="button" 
-        data-toggle="collapse" 
-        data-target="#navbarSupportedContent" 
-        aria-controls="navbarSupportedContent" 
-        aria-expanded="false" 
-        aria-label="Toggle navigation"
-        >
-      <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active" scroll-to="about-section">
-            <a class="nav-link" href="#about-section">About</a>
-          </li>
-          <li class="nav-item" scroll-to="work-section">
-            <a class="nav-link" href="#work-section">Work</a>
-          </li>
-          <li class="nav-item" scroll-to="projects-section">
-            <a class="nav-link" href="#projects-section">Projects</a>
-          </li>
-          <li class="nav-item" scroll-to="resume-section">
-            <a class="nav-link" href="#resume-section">Resume</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" target="_blank" href="https://www.linkedin.com/in/noah-hammoud/">
-              <img src="images/LinkedIn.png" alt="LinkedIn Logo" style="max-width: 1.75rem;">
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <!-- About Section -->
-    <div id="about-section" class="container-fluid text-light d-flex align-items-center justify-content-center section">
-      <div class="row text-center d-flex align-items-center justify-content-center">
-        <div class="col-lg-6 col-md-10 col-sm-12 mt-md-0 pt-md-0 mt-5 pt-5">
-          <img class="section_img img-fluid" src="images/about_image.jpg" alt="about-img">
-        </div>
-        <div class="col-lg-6 col-md-10 col-sm-12 mt-lg-0 mt-5 about_text">
-          <h1>Hello, I'm <span>Noah</span></h1>
-          <h5>I'm a Software Engineering graduate with diverse experience & skills, including:</h5>
-          <div class="about_text_icons d-flex justify-content-center flex-wrap">
-            <img class="img-fluid" src="images/Python.png" alt="Python logo">
-            <img class="img-fluid" src="images/Java.png" alt="Java logo">
-            <img class="img-fluid" src="images/JavaScript.png" alt="JS logo">
-            <img class="img-fluid" src="images/Typescript.png" alt="TS logo">
-            <img class="img-fluid" src="images/C.png" alt="C logo">
-            <img class="img-fluid" src="images/Php.png" alt="Php logo">
-            <img class="img-fluid" src="images/Html.png" alt="Html logo">
-            <img class="img-fluid" src="images/Css.png" alt="Css logo">
-            <img class="img-fluid" src="images/aws.png" alt="Aws logo">
-            <img class="img-fluid" src="images/nodeJs.png" alt="Node.js logo">
-            <img class="img-fluid" src="images/Angular.png" alt="Angular logo">
-            <img class="img-fluid" src="images/React.png" alt="React logo">
-            <img class="img-fluid" src="images/Net.png" alt=">.Net logo">
-            <img class="img-fluid" src="images/CSharp.png" alt=">C# logo">
-            <img class="img-fluid" src="images/Spring.png" alt=">Spring logo">
-            <img class="img-fluid" src="images/SQL.png" alt=">SQL logo">
-            <img class="img-fluid" src="images/azure.png" alt=">Azure logo">
-            <img class="img-fluid" src="images/docker.png" alt=">Docker logo">
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Work Section -->
-    <div id="work-section" class="container-fluid text-light d-flex align-items-center justify-content-center section">
-      <div class="row justify-content-center">
-        <div class="col-xl-7 col-lg-8 col-md-10 col-sm-12">
-          <h1 class="text-center my-5 pb-5">Work Experience:</h1>
-          <ul class="timeline">
-            <li>
-              <a href="https://www.jsitelecom.com/"><span>JSI Telecom - Software Developer</span></a>
-              <a class="date"><span>May 2023 - Dec 2023</span></a>
-              <p>Worked on different Agile teams responsible for APIs, web applications, and reporting tools. 
-                Assisted in developing the latest features for various web applications. Developed different Angular components, services, and modules.
-              </p>
-            </li>
-            <li>
-              <a href="https://www.infrastructure.gc.ca/index-eng.html"><span>Infrastructure Canada - Application Developer</span></a>
-              <a class="date"><span>May 2022 - Aug 2022</span></a>
-              <p>Implemented and expanded on features for our dynamic form framework. Created SQL queries and scripts
-                that automated data clean-up and retrieval. Worked on operational work involving server management and deployments.
-              </p>
-            </li>
-            <li>
-              <a href="https://ised-isde.canada.ca/site/communications-research-centre-canada/en"><span>CRC Canada - Cloud DevOps Engineer</span></a>
-              <a class="date"><span>May 2021 - Apr 2022</span></a>
-              <p>Worked on various tasks involving automation, disaster recovery, and cloud infrastructure as code. Developed Python scripts using 
-                the Boto3 SDK to automate various tasks such as creating and manipulating AWS resources.
-              </p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <!-- Project Section -->
-    <div id="projects-section" class="container-fluid d-flex flex-column align-items-center justify-content-center section">
-      <div class="row text-light my-5 pb-5">
-        <h1>Notable Projects:</h1>
-      </div>
-      <div class="row mx-4">
-        <!-- Project #1 -->
-        <div class="col-md-3 mb-4">
-          <div class="card h-100">
-            <img src="./images/project1.png" class="card-img-top" alt="4th-Year-Project-Management-App-img">
-            <div class="card-body">
-              <h5 class="card-title">Carleton Class Scheduler</h5>
-              <p class="card-text">
-                A full-stack cloud based application done for my capstone project. 
-                Assists students in building their schedules at Carleton University.
-              </p>
-              <a href="https://github.com/Noahh01/CarletonClassScheduler" target="_blank" class="stretched-link"></a>
-            </div>
-          </div>
-        </div>
-        <!-- Project #2 -->
-        <div class="col-md-3 mb-4">
-          <div class="card h-100">
-            <img src="./images/project2.png" class="card-img-top" alt="4th-Year-Project-Management-App-img">
-            <div class="card-body">
-              <h5 class="card-title">4th Year Project Management App</h5>
-              <p class="card-text">
-                A full-stack application created for an academic project using Spring Boot (Java, JavaScript, APIs, HTML and CSS).
+    <!-- CRT scanline / vignette overlay -->
+    <div class="crt" aria-hidden="true"></div>
 
-              </p>
-              <a href="https://github.com/Noahh01/4th-Project-Management-Application" target="_blank" class="stretched-link"></a>
+    <!-- Top bar -->
+    <header class="topbar">
+      <a class="brand" href="#about">noah@portfolio</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#about" class="nav-link" data-section="about">about</a>
+        <a href="#work" class="nav-link" data-section="work">work</a>
+        <a href="#projects" class="nav-link" data-section="projects">projects</a>
+        <a href="#resume" class="nav-link" data-section="resume">resume</a>
+        <a href="https://www.linkedin.com/in/noah-hammoud/" target="_blank" rel="noopener" class="nav-link nav-ext">linkedin ↗</a>
+      </nav>
+    </header>
+
+    <main class="terminal" id="top">
+      <!-- Window chrome -->
+      <div class="titlebar">
+        <span class="dot dot-red"></span>
+        <span class="dot dot-yellow"></span>
+        <span class="dot dot-green"></span>
+        <span class="titlebar-title">noah@portfolio</span>
+      </div>
+
+      <div class="screen">
+        <!-- About -->
+        <section id="about" class="section">
+          <h2 class="section-title">about</h2>
+          <h1 class="out"><span class="typed" data-text="Noah Hammoud"></span><span class="typed-cursor" aria-hidden="true"></span></h1>
+          <p class="out role">AI Software Developer · Ottawa, Canada</p>
+          <p class="out muted">
+            I build AI applications and full-stack systems — LLM-powered analysis, model
+            inference pipelines, and the cloud infrastructure behind them. My work spans
+            Triton-served vision and language models, FastAPI services with Agno and vLLM,
+            and Kubernetes deployments.
+          </p>
+
+          <div class="skill-groups out">
+            <div class="skill-group">
+              <h3 class="skill-group-title">languages</h3>
+              <ul class="skills" aria-label="Programming languages">
+                <li>Python</li>
+                <li>Java</li>
+                <li>C#</li>
+                <li>TypeScript</li>
+                <li>JavaScript</li>
+                <li>SQL</li>
+                <li>C</li>
+                <li>PHP</li>
+                <li>Golang</li>
+              </ul>
+            </div>
+
+            <div class="skill-group">
+              <h3 class="skill-group-title">ai / ml &amp; backend</h3>
+              <ul class="skills" aria-label="AI, ML and backend">
+                <li>NVIDIA Triton</li>
+                <li>vLLM</li>
+                <li>Hugging Face</li>
+                <li>Model Mesh</li>
+                <li>FastAPI</li>
+                <li>Agno</li>
+                <li>Spring Boot</li>
+                <li>Node.js</li>
+              </ul>
+            </div>
+
+            <div class="skill-group">
+              <h3 class="skill-group-title">cloud &amp; devops</h3>
+              <ul class="skills" aria-label="Cloud and DevOps">
+                <li>AWS</li>
+                <li>Azure</li>
+                <li>Docker</li>
+                <li>Kubernetes</li>
+                <li>Helm</li>
+                <li>GitHub Actions</li>
+                <li>CI/CD</li>
+                <li>Linux</li>
+              </ul>
+            </div>
+
+            <div class="skill-group">
+              <h3 class="skill-group-title">data &amp; frontend</h3>
+              <ul class="skills" aria-label="Data and frontend">
+                <li>PostgreSQL</li>
+                <li>MongoDB</li>
+                <li>Iceberg</li>
+                <li>Airflow</li>
+                <li>Spark</li>
+                <li>Flink</li>
+                <li>React</li>
+                <li>Angular</li>
+                <li>HTML</li>
+                <li>CSS</li>
+              </ul>
             </div>
           </div>
-        </div>
-        <!-- Project #3 -->
-        <div class="col-md-3 mb-4">
-          <div class="card h-100">
-            <img src="./images/project3.png" class="card-img-top" alt="Monopoly-Game-img">
-            <div class="card-body">
-              <h5 class="card-title">Maze Solver</h5>
-              <p class="card-text">
-                A computer vision Maze Solver application using Python, machine learning (CNN) & OpenCV. 
+        </section>
+
+        <!-- Work -->
+        <section id="work" class="section">
+          <h2 class="section-title">work</h2>
+
+          <ol class="timeline out">
+            <li class="entry">
+              <div class="entry-head">
+                <a class="entry-title" href="https://www.jsitelecom.com/" target="_blank" rel="noopener">JSI Telecom — AI Software Developer</a>
+                <span class="entry-date">Jun 2024 – Present</span>
+              </div>
+              <p class="entry-body">
+                AI applications in Python and Java using Triton-served vision and language models.
+                Built FastAPI services with the Agno agentic framework and vLLM, and refactored
+                inference pipelines for 3× higher throughput. CI/CD with GitHub Actions and Helm;
+                deployed on Kubernetes.
+              </p>
+            </li>
+            <li class="entry">
+              <div class="entry-head">
+                <a class="entry-title" href="https://www.jsitelecom.com/" target="_blank" rel="noopener">JSI Telecom — Software Developer (Co-op)</a>
+                <span class="entry-date">Sep 2022 – Dec 2022 · May 2023 – Dec 2023</span>
+              </div>
+              <p class="entry-body">
+                Feature development for web apps and backend services in Agile teams. Built Angular
+                components and led the migration of ~250 E2E tests from Protractor to Cypress.
+              </p>
+            </li>
+            <li class="entry">
+              <div class="entry-head">
+                <a class="entry-title" href="https://www.infrastructure.gc.ca/index-eng.html" target="_blank" rel="noopener">Infrastructure Canada — Application Developer (Co-op)</a>
+                <span class="entry-date">May 2022 – Aug 2022 · Jan 2023 – Apr 2023</span>
+              </div>
+              <p class="entry-body">
+                Built features for a web-based dynamic form framework. Wrote SQL queries and
+                automation scripts for data cleanup and retrieval, plus production bug fixes.
+              </p>
+            </li>
+            <li class="entry">
+              <div class="entry-head">
+                <a class="entry-title" href="https://ised-isde.canada.ca/site/communications-research-centre-canada/en" target="_blank" rel="noopener">CRC Canada — Cloud DevOps Engineer (Co-op)</a>
+                <span class="entry-date">May 2021 – Apr 2022</span>
+              </div>
+              <p class="entry-body">
+                Automation and infrastructure-as-code for cloud environments and disaster recovery.
+                Automated AWS workflows with Step Functions and Python (Boto3).
+              </p>
+            </li>
+          </ol>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="section">
+          <h2 class="section-title">projects</h2>
+
+          <div class="projects out">
+            <a class="project" href="https://github.com/Noahh01/CarletonClassScheduler" target="_blank" rel="noopener">
+              <div class="project-head">
+                <span class="project-name">Carleton Class Scheduler</span>
+                <span class="project-tag">capstone</span>
+              </div>
+              <p class="project-desc">
+                A full-stack, cloud-based application built for my capstone project. Helps students
+                build their schedules at Carleton University.
+              </p>
+              <span class="project-stack">full-stack · cloud</span>
+            </a>
+
+            <a class="project" href="https://github.com/Noahh01/4th-Project-Management-Application" target="_blank" rel="noopener">
+              <div class="project-head">
+                <span class="project-name">Project Management App</span>
+                <span class="project-tag">academic</span>
+              </div>
+              <p class="project-desc">
+                A full-stack application created for an academic project using Spring Boot
+                (Java, JavaScript, APIs, HTML, and CSS).
+              </p>
+              <span class="project-stack">spring boot · java · js</span>
+            </a>
+
+            <a class="project" href="https://github.com/Noahh01/MazeSolver" target="_blank" rel="noopener">
+              <div class="project-head">
+                <span class="project-name">Maze Solver</span>
+                <span class="project-tag">computer vision</span>
+              </div>
+              <p class="project-desc">
+                A computer vision maze solver using Python, machine learning (CNN), and OpenCV.
                 Users can upload or generate a maze to be solved.
               </p>
-              <a href="https://github.com/Noahh01/MazeSolver" target="_blank" class="stretched-link"></a>
-            </div>
-          </div>
-        </div>
-        <!-- Project #4 -->
-        <div class="col-md-3 mb-4">
-          <div class="card h-100">
-            <img src="./images/project4.png" class="card-img-top" alt="Elevator-Simulator-img">
-            <div class="card-body">
-              <h5 class="card-title">Elevator Simulator</h5>
-              <p class="card-text">
-                Multithreaded concurrent real-time elevator control system for an academic project (Java). 
-                Makes use of UDP communication protocol.
+              <span class="project-stack">python · cnn · opencv</span>
+            </a>
+
+            <a class="project" href="https://github.com/Noahh01/SYSC3303-Elevator-Simulator" target="_blank" rel="noopener">
+              <div class="project-head">
+                <span class="project-name">Elevator Simulator</span>
+                <span class="project-tag">concurrency</span>
+              </div>
+              <p class="project-desc">
+                A multithreaded, concurrent real-time elevator control system for an academic project
+                (Java), using the UDP communication protocol.
               </p>
-              <a href="https://github.com/Noahh01/SYSC3303-Elevator-Simulator" target="_blank" class="stretched-link"></a>
+              <span class="project-stack">java · multithreading · udp</span>
+            </a>
+          </div>
+
+          <a class="btn out" href="https://github.com/Noahh01" target="_blank" rel="noopener">View my GitHub →</a>
+        </section>
+
+        <!-- Resume -->
+        <section id="resume" class="section">
+          <h2 class="section-title">resume</h2>
+
+          <div class="resume out">
+            <p class="muted">
+              My resume covers my full work history, education, and technical skills in one page.
+            </p>
+            <div class="resume-actions">
+              <a class="btn" href="NH_Resume_2026.pdf" download="Noah-Hammoud-Resume.pdf">Download resume</a>
+              <a class="btn btn-ghost" href="NH_Resume_2026.pdf" target="_blank" rel="noopener">Open in new tab</a>
             </div>
           </div>
-        </div>
+        </section>
       </div>
-      <div class="row mt-5 mb-5">
-        <a href="https://github.com/Noahh01" class="button">View My GitHub</a>
-      </div>
-    </div>
-    <!-- Resume Section -->
-    <div id="resume-section" class="container-fluid text-light d-flex align-items-center justify-content-center section">
-      <div class="row d-flex my-5 pb-5">
-        <div class="col-12 mb-5 pb-4 text-center">
-          <img class="section_img img-fluid" src="images/resume.png" alt="resume-img">
-        </div>
-        <div class="col-12 text-center">
-          <h3 class="mb-4"><span>Current Status:</span> seeking full-time work</h3>
-          <h4 class="mb-5">Click below to view or download my resume:</h4>
-          <a href="NH_Resume.pdf" class="button" alt="resume-download">My Resume</a>
-        </div>
-      </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </main>
+
     <script src="main.js"></script>
   </body>
 </html>
