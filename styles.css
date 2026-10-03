@@ -114,6 +114,54 @@ body::before {
   flex-wrap: wrap;
 }
 
+/* Hamburger toggle — hidden until the mobile breakpoint */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.nav-toggle:hover {
+  border-color: var(--green-dim);
+  background: rgba(78, 240, 143, 0.07);
+}
+
+.nav-toggle-bar {
+  display: block;
+  width: 16px;
+  height: 1.5px;
+  margin: 0 auto;
+  background: var(--text-dim);
+  border-radius: 1px;
+  transition: transform 0.25s ease, opacity 0.2s ease, background 0.2s ease;
+}
+
+.nav-toggle:hover .nav-toggle-bar {
+  background: var(--green);
+}
+
+/* Animate into an X when open */
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(1) {
+  transform: translateY(5.5px) rotate(45deg);
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(3) {
+  transform: translateY(-5.5px) rotate(-45deg);
+}
+
 .nav-link {
   position: relative;
   color: var(--text-dim);
@@ -593,12 +641,60 @@ h1.out {
   body { font-size: 14px; }
 
   .topbar {
-    flex-direction: column;
-    align-items: flex-start;
     gap: 0.5rem;
+    padding: 0.6rem 0.85rem;
   }
 
-  .nav { gap: 0.15rem; }
+  .brand {
+    font-size: 0.8rem;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  /* Collapse the nav into a dropdown panel */
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0.35rem 0.85rem 0.75rem;
+    background: rgba(8, 10, 9, 0.97);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-soft);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-6px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  }
+
+  .nav.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .nav-link {
+    font-size: 0.85rem;
+    padding: 0.6rem 0.25rem;
+    border-bottom: 1px solid var(--border-soft);
+  }
+
+  .nav-link:last-child {
+    border-bottom: none;
+  }
+
+  .nav-link.active::after {
+    left: 0.25rem;
+    right: auto;
+    width: 1.1rem;
+    bottom: 0.35rem;
+  }
 
   .projects { grid-template-columns: 1fr; }
 

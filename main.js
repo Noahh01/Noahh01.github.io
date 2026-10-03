@@ -38,7 +38,7 @@ const typeName = () => {
 
 /* Highlight the nav link for the section currently in view. */
 const updateActiveNav = () => {
-  const marker = window.scrollY + window.innerHeight * 0.35;
+  const marker = window.scrollY + window.innerHeight * 0.5;
   let current = null;
 
   sections.forEach((section) => {
@@ -46,6 +46,15 @@ const updateActiveNav = () => {
       current = section;
     }
   });
+
+  /* Short trailing sections never reach the marker, so pin the last one
+     once the page is scrolled to the bottom. */
+  const atBottom =
+    window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2;
+
+  if (atBottom && sections.length) {
+    current = sections[sections.length - 1];
+  }
 
   navLinks.forEach((link) => {
     link.classList.toggle("active", current !== null && link.dataset.section === current.id);
@@ -66,6 +75,45 @@ const revealObserver = new IntersectionObserver(
 );
 
 sections.forEach((section) => revealObserver.observe(section));
+
+/* Mobile nav toggle */
+const navToggle = document.querySelector(".nav-toggle");
+const nav = document.querySelector(".nav");
+
+const closeNav = () => {
+  if (!nav || !navToggle) return;
+  nav.classList.remove("open");
+  navToggle.setAttribute("aria-expanded", "false");
+};
+
+if (navToggle && nav) {
+  navToggle.addEventListener("click", () => {
+    const isOpen = nav.classList.toggle("open");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  /* Close after picking a destination */
+  nav.querySelectorAll(".nav-link").forEach((link) => {
+    link.addEventListener("click", closeNav);
+  });
+
+  /* Close on outside click */
+  document.addEventListener("click", (event) => {
+    if (!nav.classList.contains("open")) return;
+    if (nav.contains(event.target) || navToggle.contains(event.target)) return;
+    closeNav();
+  });
+
+  /* Close on Escape */
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeNav();
+  });
+
+  /* Reset when resizing back to desktop */
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 720) closeNav();
+  });
+}
 
 let ticking = false;
 window.addEventListener("scroll", () => {
